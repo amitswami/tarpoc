@@ -8,10 +8,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class WebClientConfiguration {
 	
 	@Bean
-	public WebClient webClient() {
-		String baseURI = "http://localhost:8080/remote" ;
-		return WebClient.builder().baseUrl(baseURI).build() ;
-		
+	public WebClient webClient() {		
+		return WebClient.builder().build() ;
 	}
 
 }
