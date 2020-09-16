@@ -16,11 +16,11 @@ public class ProductService {
 	private WebClient productClient ;
 	
 	@Value("${PRODUCT_API_HOST}")
-	private String priceAPIHost;
+	private String productAPIHost;
 
 	
 	public Mono<Product> getProduct(Number productId) {
-		return productClient.get().uri(priceAPIHost + productId).retrieve().bodyToMono(Product.class);
+		return productClient.get().uri(productAPIHost + productId).retrieve().bodyToMono(Product.class);
 	}
 	
 	

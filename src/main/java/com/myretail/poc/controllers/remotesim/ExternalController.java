@@ -12,7 +12,7 @@ import com.myretail.poc.entity.Product;
 public class ExternalController {
 	
 	private Product MOCK_PRODUCT = new Product(1, "Mock Product") ;
-	private Price MOCK_PRICE = new Price(12.34, "USD") ;
+	private Price MOCK_PRICE = new Price(1, 12.34, "USD") ;
 	
 	@RequestMapping("/rproduct/{id}")
 	public Product getRemoteProduct(@PathVariable String id) {
