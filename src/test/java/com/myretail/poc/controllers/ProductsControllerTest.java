@@ -1,11 +1,14 @@
 package com.myretail.poc.controllers;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
+import org.hamcrest.Matcher;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentMatchers;
+import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -19,6 +22,7 @@ import com.myretail.poc.entity.ProductWithPrice;
 import com.myretail.poc.service.PriceService;
 import com.myretail.poc.service.ProductService;
 
+import io.netty.util.internal.shaded.org.jctools.queues.MessagePassingQueue.Consumer;
 import reactor.core.publisher.Mono;
 
 
@@ -41,7 +45,7 @@ public class ProductsControllerTest {
 	@DisplayName("Should get a Product By Id")
 	public void getProductById() {
 		Product product = new Product(1, "Mock Product 1") ;
-		Price price = new Price(1, "USD") ;
+		Price price = new Price(1, 1, "USD") ;
 		ProductWithPrice productWithPrice = new ProductWithPrice(product, price) ;
 		
 		when(productService.getProduct(ArgumentMatchers.any())).thenReturn(Mono.just(product)) ;
@@ -49,7 +53,7 @@ public class ProductsControllerTest {
 		
 		webTestClient.get().uri("/products/1").exchange()
 		.expectStatus().isOk()
-		.expectBody(ProductWithPrice.class) ;
+		.expectBody(ProductWithPrice.class); 
 		
 	}
 

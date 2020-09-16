@@ -20,6 +20,8 @@ public class PriceService {
 
 	
 	public Mono<Price> getPrice(Number productId) {
+		System.out.println(priceClient);
+		System.out.println("----" + priceAPIHost);
 		return priceClient.get().uri(priceAPIHost + productId).retrieve().bodyToMono(Price.class);
 	}
 
