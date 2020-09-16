@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class com.myretail.poc.controllers.ProductsControllerTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class com.myretail.poc.controllers.ProductsControllerTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.myretail.poc.controllers.html">com.myretail.poc.controllers</a> &gt; ProductsControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.689s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Should get a Product By Id</td>
+<td class="success">getProductById()</td>
+<td class="success">0.689s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>17:44:02.835 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+17:44:02.836 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+17:44:02.843 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.myretail.poc.controllers.ProductsControllerTest] from class [org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper]
+17:44:02.853 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.myretail.poc.controllers.ProductsControllerTest], using SpringBootContextLoader
+17:44:02.854 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.myretail.poc.controllers.ProductsControllerTest]: class path resource [com/myretail/poc/controllers/ProductsControllerTest-context.xml] does not exist
+17:44:02.856 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.myretail.poc.controllers.ProductsControllerTest]: class path resource [com/myretail/poc/controllers/ProductsControllerTestContext.groovy] does not exist
+17:44:02.857 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.myretail.poc.controllers.ProductsControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+17:44:02.857 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.myretail.poc.controllers.ProductsControllerTest]: ProductsControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+17:44:02.904 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.myretail.poc.controllers.ProductsControllerTest]
+17:44:02.983 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/amit/Downloads/poc/build/classes/java/main/com/myretail/poc/PocApplication.class]
+17:44:02.986 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.myretail.poc.PocApplication for test class com.myretail.poc.controllers.ProductsControllerTest
+17:44:03.003 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper - @TestExecutionListeners is not present for class [com.myretail.poc.controllers.ProductsControllerTest]: using defaults.
+17:44:03.003 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+17:44:03.008 [Test worker] DEBUG org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+17:44:03.009 [Test worker] INFO org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@558dd624, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@58586c5e, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@47fd61fd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7d67aa8c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@46606ff2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d41c1fc, org.springframework.test.context.event.EventPublishingTestExecutionListener@711fb120, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@316c5645, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@7436a065, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@272bd13e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2bb1e24a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@78bc5707, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@39c8e5fd]
+17:44:03.010 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@409361db testClass = ProductsControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@64146831 testClass = ProductsControllerTest, locations = '{}', classes = '{class com.myretail.poc.PocApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.OverrideAutoConfigurationContextCustomizerFactory$DisableAutoConfigurationContextCustomizer@7f162ded, org.springframework.boot.test.autoconfigure.filter.TypeExcludeFiltersContextCustomizer@5c4d155b, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@c74f38f6, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@448dde93, [ImportsContextCustomizer@7e8a1fdb key = [org.springframework.boot.autoconfigure.cache.CacheAutoConfiguration, org.springframework.boot.autoconfigure.gson.GsonAutoConfiguration, org.springframework.boot.autoconfigure.jackson.JacksonAutoConfiguration, org.springframework.boot.autoconfigure.jsonb.JsonbAutoConfiguration, org.springframework.boot.autoconfigure.context.MessageSourceAutoConfiguration, org.springframework.boot.autoconfigure.freemarker.FreeMarkerAutoConfiguration, org.springframework.boot.autoconfigure.http.codec.CodecsAutoConfiguration, org.springframework.boot.autoconfigure.mustache.MustacheAutoConfiguration, org.springframework.boot.autoconfigure.thymeleaf.ThymeleafAutoConfiguration, org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration, org.springframework.boot.autoconfigure.web.reactive.WebFluxAutoConfiguration, org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebFluxAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.reactive.ReactiveOAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.reactive.ReactiveOAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@183fc5, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@2caf164e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@22578ae8, org.springframework.boot.test.context.SpringBootTestArgs@1], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+17:44:03.120 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.autoconfigure.web.reactive.WebFluxTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2020-09-16 17:44:03.945  INFO 2342 --- [    Test worker] c.m.p.c.ProductsControllerTest           : Starting ProductsControllerTest on Amits-MacBook-Air.local with PID 2342 (started by amit in /Users/amit/Downloads/poc)
+2020-09-16 17:44:03.956  INFO 2342 --- [    Test worker] c.m.p.c.ProductsControllerTest           : No active profile set, falling back to default profiles: default
+2020-09-16 17:44:06.072  INFO 2342 --- [    Test worker] c.m.p.c.ProductsControllerTest           : Started ProductsControllerTest in 2.94 seconds (JVM running for 9.829)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 6.6.1</a> at 16 Sep, 2020 5:44:07 PM</p>
+</div>
+</div>
+</body>
+</html>

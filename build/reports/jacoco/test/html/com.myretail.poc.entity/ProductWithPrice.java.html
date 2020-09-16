@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProductWithPrice.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">poc</a> &gt; <a href="index.source.html" class="el_package">com.myretail.poc.entity</a> &gt; <span class="el_source">ProductWithPrice.java</span></div><h1>ProductWithPrice.java</h1><pre class="source lang-java linenums">package com.myretail.poc.entity;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({&quot;id&quot;, &quot;name&quot;})
+public class ProductWithPrice {
+	Price price; 
+	Product product ;
+	
+<span class="fc" id="L11">	public ProductWithPrice() {</span>
+		
+<span class="fc" id="L13">	}</span>
+	
+	public ProductWithPrice(Product product, Price price) {
+<span class="fc" id="L16">		super();</span>
+<span class="fc" id="L17">		this.price = price;</span>
+<span class="fc" id="L18">		this.product = product;</span>
+<span class="fc" id="L19">	}</span>
+
+	@JsonProperty(&quot;current_price&quot;)
+	public Price getCurrentPrice() { 
+<span class="fc" id="L23">		return price;</span>
+	}
+
+	public void setPrice(Price price) {
+<span class="nc" id="L27">		this.price = price;</span>
+<span class="nc" id="L28">	}</span>
+
+
+	public void setProduct(Product product) {
+<span class="nc" id="L32">		this.product = product;</span>
+<span class="nc" id="L33">	}</span>
+	
+	
+	public Number getId() {
+<span class="fc" id="L37">		return product.getId() ;</span>
+	}
+	
+	public String getName() {
+<span class="fc" id="L41">		return product.getName() ;</span>
+	}
+
+	@Override
+	public int hashCode() {
+<span class="nc" id="L46">		final int prime = 31;</span>
+<span class="nc" id="L47">		int result = 1;</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">		result = prime * result + ((price == null) ? 0 : price.hashCode());</span>
+<span class="nc bnc" id="L49" title="All 2 branches missed.">		result = prime * result + ((product == null) ? 0 : product.hashCode());</span>
+<span class="nc" id="L50">		return result;</span>
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+<span class="nc bnc" id="L55" title="All 2 branches missed.">		if (this == obj)</span>
+<span class="nc" id="L56">			return true;</span>
+<span class="nc bnc" id="L57" title="All 2 branches missed.">		if (obj == null)</span>
+<span class="nc" id="L58">			return false;</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">		if (getClass() != obj.getClass())</span>
+<span class="nc" id="L60">			return false;</span>
+<span class="nc" id="L61">		ProductWithPrice other = (ProductWithPrice) obj;</span>
+<span class="nc bnc" id="L62" title="All 2 branches missed.">		if (price == null) {</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">			if (other.price != null)</span>
+<span class="nc" id="L64">				return false;</span>
+<span class="nc bnc" id="L65" title="All 2 branches missed.">		} else if (!price.equals(other.price))</span>
+<span class="nc" id="L66">			return false;</span>
+<span class="nc bnc" id="L67" title="All 2 branches missed.">		if (product == null) {</span>
+<span class="nc bnc" id="L68" title="All 2 branches missed.">			if (other.product != null)</span>
+<span class="nc" id="L69">				return false;</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">		} else if (!product.equals(other.product))</span>
+<span class="nc" id="L71">			return false;</span>
+<span class="nc" id="L72">		return true;</span>
+	}
+
+	@Override
+	public String toString() {
+<span class="nc" id="L77">		return &quot;ProductWithPrice [price=&quot; + price + &quot;, product=&quot; + product + &quot;]&quot;;</span>
+	}
+	
+	
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>
