@@ -39,7 +39,7 @@ public class PriceServiceTest {
 	@DisplayName("Should get price from price API")
 	public void getPrice() {
 
-		Price mockPrice = new Price(1, 1, "USD");
+		Price mockPrice = new Price(1L, 1D, "USD");
 
 		RequestHeadersUriSpec requestHeadersUriSpecMock = Mockito.mock(WebClient.RequestHeadersUriSpec.class);
 		when(priceClient.get()).thenReturn(requestHeadersUriSpecMock);
@@ -49,7 +49,7 @@ public class PriceServiceTest {
 		when(reuestHEaderSpec.retrieve()).thenReturn(value);
 		when(value.bodyToMono(Price.class)).thenReturn(Mono.just(mockPrice));
 		Mono<Price> actualPrice = priceService.getPrice(1);
-		assertEquals(1, actualPrice.block().getValue());
+		assertEquals(1.0, actualPrice.block().getValue());
 		
 		
 		

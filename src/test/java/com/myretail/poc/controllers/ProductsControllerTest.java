@@ -44,8 +44,8 @@ public class ProductsControllerTest {
 	@Test()
 	@DisplayName("Should get a Product By Id")
 	public void getProductById() {
-		Product product = new Product(1, "Mock Product 1") ;
-		Price price = new Price(1, 1, "USD") ;
+		Product product = new Product(1L, "Mock Product 1") ;
+		Price price = new Price(1L, 1D, "USD") ;
 		ProductWithPrice productWithPrice = new ProductWithPrice(product, price) ;
 		
 		when(productService.getProduct(ArgumentMatchers.any())).thenReturn(Mono.just(product)) ;

@@ -1,20 +1,29 @@
 package com.myretail.poc.entity;
 
+
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonPropertyOrder({"value"})
+@Entity
 public class Price {
 	
-	private Number productId ;
-	private Number value ;
-	private String currencyCode ;
+	@Id
+	private Long productId ;
+	
+	private Double value ;
+	
+	private String currencyCode ; 
 	
 	public Price() {
 		
 	}
-	public Price(Number productId, Number value, String currencyCode) {
+	public Price(Long productId, Double value, String currencyCode) {
 		super();
 		this.productId = productId;
 		this.value = value;
@@ -23,7 +32,7 @@ public class Price {
 	public Number getValue() {
 		return value;
 	}
-	public void setValue(Number value) {
+	public void setValue(Double value) {
 		this.value = value;
 	}
 	
@@ -39,7 +48,8 @@ public class Price {
 	public Number getProductId() {
 		return productId;
 	}
-	public void setProductId(Number productId) {
+	
+	public void setProductId(Long productId) {
 		this.productId = productId;
 	}
 	@Override
