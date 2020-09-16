@@ -36,7 +36,7 @@ public class ProductServiceTest {
 	@DisplayName("Should get product from product API")
 	public void getProduct() {
 
-		Product  mockProduct = new Product(1, "Mock Product");
+		Product  mockProduct = new Product(1L, "Mock Product");
 
 		RequestHeadersUriSpec requestHeadersUriSpecMock = Mockito.mock(WebClient.RequestHeadersUriSpec.class);
 		when(client.get()).thenReturn(requestHeadersUriSpecMock);
@@ -47,7 +47,7 @@ public class ProductServiceTest {
 		when(value.bodyToMono(Product.class)).thenReturn(Mono.just(mockProduct));
 		
 		Mono<Product> actualProduct = productService.getProduct(1);
-		assertEquals(1, actualProduct.block().getId());
+		assertEquals(1L, actualProduct.block().getId());
 		
 		
 		
